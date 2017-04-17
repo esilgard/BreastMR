@@ -1,0 +1,22 @@
+Alveolectomy;alveolectomies
+Bronchoscopy;broncoscopies;videobronchoscopies
+Thoracentesis
+Cystoscopy;cystoscopies
+Endoscopy;endoscopies
+Laminectomy;laminectomies
+Foraminotomy;foraminotomies
+Facetectomy;facetomies
+Fusion;fusions
+Ligation;ligations
+Lobectomy;lobectomies
+Lymphadenectomy;lymphadenectomies
+Lysis Carotid Artery;lysis of carotid artery
+Mediastinoscopy;mediastinoscopies
+Paracentesis
+Pericardiocentesis
+Pneumonectomy
+Thoracentesis
+Thoracoscopy;thoracoscopies
+Thoracostomy;thoracostomies
+Thoracotomy;thoractomies
+Pleurectomy

@@ -1,0 +1,15 @@
+Adenoma
+Ascites
+Cyst
+Dysplasia
+Fibroma
+Fibromadenoma
+Fibrosis
+Granuloma
+Hyperplasia
+Inflammation
+Lipoma
+Metaplasia
+Necrosis
+Polyp
+Treatment Effect

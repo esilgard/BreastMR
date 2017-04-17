@@ -1,0 +1,4 @@
+Right;rt;RUQ;RIQ;RLQ
+Left;lt;LUQ;LIQ;LLQ
+Bilateral
+Midline

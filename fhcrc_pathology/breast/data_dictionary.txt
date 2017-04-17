@@ -1,0 +1,16 @@
+BenignFinding	Class
+HighRiskFinding	Class
+MalignantFinding	Class
+DCIS_NuclearGrade	Class
+NuclearPleomorphism	Class
+MitoticActivity	Class
+TubuleFormation	Class
+DCIS_NuclearGrade	Class
+Her2FISH	Class
+Her2IHC	Class
+Ki67	Class
+Nottingham	Class
+ER	Class
+PR	Class
+ERAllred	Class
+PRAllred	Class

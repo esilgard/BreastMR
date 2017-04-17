@@ -1,0 +1,4 @@
+Malignant;malignancy;invasive
+High Risk
+Benign
+Metastatic;metastasis;metastases

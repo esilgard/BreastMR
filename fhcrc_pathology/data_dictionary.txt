@@ -1,0 +1,17 @@
+PathSpecimenType	Class
+PathSite	Class
+PathFindingSide	Class
+PathProcedureSide	Class
+PathSignedDate	Class
+PathCollectedDate	Class
+PathReceivedDate	Class
+Pathologist	Class
+PathStageT	Class
+PathStageN	Class
+PathStageM	Class
+PathStageSystem	Class
+TotalSentinelNodes	Class
+PositiveSentinelNodes	Class
+PositiveNonSentinelNodes	Class
+TotalNonSentinelNodes	Class
+TumorMaxDimension	Class

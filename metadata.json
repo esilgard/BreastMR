@@ -1,0 +1,307 @@
+{
+	"pathology": {
+		"groupings": [{
+			"level": "table",
+			"order": "alpha",
+			"orientation": "horizontal"
+		}, {
+			"level": "recordKey",
+			"order": "alpha",
+			"orientation": "horizontal"
+		}, {
+			"level": "field",
+			"order": "alpha",
+			"orientation": "horizontal"
+		}],
+		"tables": [{
+			"table": "Pathology",
+			"fields": [{
+				"field": "OverallFinding",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Malignant", "High Risk", "Benign", "Metastatic"]
+				}]
+			},{
+				"field": "MalignantFinding",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["breast"],
+					"values": ["Invasive Ductal Carcinoma", "Invasive Lobular Carcinoma", "DCIS", "Adenocarcinoma, NOS", "Carcinoma, NOS"]
+				}]
+			},{
+				"field": "HighRiskFinding",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["LCIS", "ADH", "ALH", "Atypical Cells", "In-Situ, NOS", "Atypia", "Radial Scar", "Sclerotic Papilloma or Lesion", "Phyllodes", "Papillary Lesion"]
+				}]
+			},{
+				"field": "BenignFinding",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Adenoma", "Ascites", "Cyst", "Dysplasia", "Fibroma", "Fibromadenoma", "Fibrosis", "Granuloma", "Hyperplasia", "Inflammation", "Lipoma", "Metaplasia", "Necrosis", "Polyp", "Treatment Effect"]
+				}]
+			},{
+				"field": "PathSpecimenType",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["breast"],
+					"values": ["Core Biopsy", "FNA", "Surgical Biopsy", "Mastectomy","Washing"]
+				}]
+			},{
+				"field": "PathSite",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Abdomen", "Acetabulum", "Adrenal", "Ampulla", "Anal", "Arm", "Back", "Bile Duct", "Bladder", "Bone", "Bowel", "Brain and CNS", "Breast", "Cervix", "Chest", "Colorectal", "Diaphragm", "Endometrium", "Esophagus", "Head and Neck", "Heart", "Iliac", "Kidney", "Leg", "Liver", "Lung", "Lymph Node", "Ovary", "Pancreas", "Pelvis", "Penis", "Peritoneum", "Prostate", "Sacrum", "Skin", "Spine", "Spleen", "Stomach", "Testis", "Tonsil", "Torso", "Urine", "Uterus", "Vagina", "Vulva"]
+				},{
+					"diseaseGroup": ["breast"],
+					"values": ["Breast","1 O'clock", "1:30 O'clock", "2 O'clock", "2:30 O'clock", "3:30 O'clock", "3 O'clock", "4:30 O'clock", "4 O'clock", "5 O'clock", "5:30 O'clock", "6 O'clock", "6:30 O'clock", "7 O'clock", "7:30 O'clock", "8 O'clock", "8:30 O'clock", "9 O'clock", "9:30 O'clock", "10 O'clock", "10:30 O'clock", "11 O'clock", "11:30 O'clock", "12 O'clock", "12:30 O'clock", "LIQ", "LOQ", "UIQ", "UOQ", "Nipple", "Axillary Tail", "Axillary Lymph Node", "Sentinel Lymph Node", "Skin"]
+				}]
+			}, {
+				"field": "PathFindingSide",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Right", "Left", "Bilateral", "Midline"]
+				}]
+			},{
+				"field": "PathProcedureSide",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Right", "Left", "Bilateral", "Midline"]
+				}]
+			}, 			{
+				"field": "TumorMaxDimension",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			},{
+				"field": "NottinghamGrade",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["I", "II", "III"]
+				}]
+			},{
+				"field": "TubuleFormation",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["1", "2", "3"]
+				}]
+			}, {
+				"field": "MitoticActivity",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["1", "2", "3"]
+				}]
+			},{
+				"field": "NuclearPleomorphism",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["1", "2", "3"]
+				}]
+			},{
+				"field": "ER",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Positive", "Negative", "Equivocal", "Hetergeneous", "Insufficient"]
+				}]
+			}, {
+				"field": "ERAllred",
+				"datatype": "string",
+				"closedClass": "True",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
+				}]
+			}, {
+				"field": "PR",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Positive", "Negative", "Equivocal", "Hetergeneous", "Insufficient"]
+				}]
+			},  {
+				"field": "PRAllred",
+				"datatype": "string",
+				"closedClass": "True",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
+				}]
+			}, {
+				"field": "Her2IHC",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Positive", "Negative", "Equivocal", "Hetergeneous", "Insufficient"]
+				}]
+			}, {
+				"field": "Ki67",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			},{
+				"field": "Her2FISH",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Positive", "Negative", "Equivocal", "Hetergeneous", "Insufficient"]
+				}]
+			},{
+				"field": "PathGrade",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["high grade", "low grade", "intermediate grade", "poorly differentiated", "moderately differentiated", "well differentiated"]
+				}]
+			},{
+				"field": "PathStageT",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["Tis", "T1", "T1a", "T1b", "T1c", "T2", "T2a", "T2b", "T2c", "T3", "T3a", "T3b", "T3c", "T4", "T4a", "T4b", "T4c", "TX"]
+				}]
+			}, {
+				"field": "PathStageN",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["N0", "N1", "N1a", "N1b", "N1c", "N2", "N2a", "N2b", "N2c", "N3", "N3a", "N3b", "N3c", "N4", "N4a", "N4b", "N4c", "NX"]
+				}]
+			}, {
+				"field": "PathStageM",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["M0", "M1", "M1a", "M1b", "M1c", "M2", "M2a", "M2b", "M2c", "MX"]
+				}]
+			}, {
+				"field": "PathStageSystem",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["AJCC 8", "AJCC 7", "AJCC 6"]
+				}]
+			},{
+				"field": "DCIS_NuclearGrade",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["1", "2", "3"]
+				}]
+			},{
+				"field": "PositiveSentinelNodes",
+				"datatype": "integer",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			},{
+				"field": "TotalSentinelNodes",
+				"datatype": "integer",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			},{
+				"field": "PositiveNonSentinelNodes",
+				"datatype": "integer",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			},{
+				"field": "TotalNonSentinelNodes",
+				"datatype": "integer",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			},{
+				"field": "PathCollectedDate",
+				"datatype": "date",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			}, {
+				"field": "PathReceivedDate",
+				"datatype": "date",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			}, {
+				"field": "PathSignedDate",
+				"datatype": "date",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			}, {
+				"field": "Pathologist",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": []
+				}]
+			}]
+		}, {
+			"table": "EngineReportInfo",
+			"fields": [{
+				"field": "ClassifiedDiseaseGroup",
+				"datatype": "string",
+				"closedClass": "False",
+				"diseaseProperties": [{
+					"diseaseGroup": ["*"],
+					"values": ["brain", "breast", "GI", "GU", "gyn", "heme", "lung", "sarcoma", "skin", "other", "head_neck"]
+				}]
+			}]
+		}]
+	}
+}
