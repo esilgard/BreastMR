@@ -1,7 +1,7 @@
 Breast MR NLP engine 
 =============================================================================================
 
-This is the primary directory for the Breast Imaging Group at SCCA natural language processing engine for the parsing of clinical documents and the classification and automated extraction of clinical data elements for research and operizational needs
+This is the primary directory for the Breast Imaging Group at SCCA NLP engine for the parsing of clinical documents (primarily pathology) and the classification and automated extraction of clinical data elements for research and operizational needs
 ---------------------------------------------------------------------------------------------
 - command_line_flags.txt 
 	a tab delimited text file containing command line flags and their descriptions in the format:
