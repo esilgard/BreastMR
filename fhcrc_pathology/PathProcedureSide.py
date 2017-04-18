@@ -25,6 +25,7 @@ class PathProcedureSide(OneFieldPerSpecimen):
         self.bad_section = r'CLINICAL|Note'
         ## ability to infer new value from one or more existing ones
         self.inference_flag = True
+        self.pre_negation = r'(  near|above|below| from).{,75}'
 
     def infer(self, finding_set):
         ''' infer 'bilateral' if the finding set is specifically only 'right' and 'left' '''

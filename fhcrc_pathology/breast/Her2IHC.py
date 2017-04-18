@@ -19,8 +19,9 @@ class Her2IHC(OneFieldPerReport):
     def __init__(self):
         super(Her2IHC, self).__init__()
         self.field_name = 'Her2IHC'
-        self.regex = r'(Her-2/neu) by IHC:[\s]([A-Za-z\/]+)'
+        self.regex = r'neu[\)]? by IHC:[\s]+([PNE][ositivegativequivocal]+)'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE
         self.value_type = 'match'
+        self.good_section = r'SUMMARY CANCER|DIAGNOSIS'

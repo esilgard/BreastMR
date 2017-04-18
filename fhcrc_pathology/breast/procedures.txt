@@ -1,5 +1,5 @@
 FNA;aspirate;fine needle aspirate;needle aspirate
 Core Needle Biopsy;core needle biopsy;needle biopsy
-Surgical Biopsy;resection;excision;re-excision;lumpectomy
+Surgical Biopsy;resection;excision;re excision;lumpectomy
 Mastectomy;radical mastectomy
 Washing

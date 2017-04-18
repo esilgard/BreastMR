@@ -26,6 +26,7 @@ class OneFieldPerReport(object):
         self.match_style = 'Default'
         self.table = 'Default'
         self.value_type = 'Default'
+        self.pre_negation = 'r(previous|pre-treatment|pre treatment| past).{,100}'
         
     def get_dictionaries(self, reference_file_name_string):
         '''
@@ -49,42 +50,35 @@ class OneFieldPerReport(object):
     
     def get(self, disease_group, dictionary):
         ''' find field match based on different match types (greedy, all, first, last) '''
-        def get_from_section(dictionary):
+        def get_from_section(dictionary, section_lookup, section_confidence):
             '''
-            search for a pattern in a specific section/sections of the document (currently implemented as a match first *not consistent with fullText search version)
+            search for a pattern in a specific section/sections of the document \
+            (currently implemented as a match first *not consistent with fullText search version)
             '''
-            return_d = {gb.NAME: self.field_name, gb.VALUE: None, gb.CONFIDENCE: ('%.2f' % 0.0), \
+            return_d = {gb.NAME: self.field_name, gb.VALUE: set([]), gb.CONFIDENCE: ('%.2f' % 0.0), \
                                  gb.KEY: gb.ALL, gb.VERSION: self.get_version(),\
                                  gb.STARTSTOPS: [], gb.TABLE: self.table}
-            for section in dictionary:
-                if re.search(self.good_section, section[1]):
-                    for index, text in dictionary[section].items():
+           
+            for section in dictionary:                
+                if re.search(section_lookup, section[1]):
+                    for index, text in dictionary[section].items():                        
                         m = re.match(self.regex, text, re.DOTALL)
-                        if m:
+                        if m and not re.search(self.pre_negation + self.regex, text, re.DOTALL):                            
                             return_d[gb.VALUE] = m.group(1)
-                            return_d[gb.CONFIDENCE] = ('%.2f' % self.confidence)                       
-                            return_d[gb.STARTSTOPS].append({gb.START: m.start(1), gb.STOP:m.end(1)})                    
-                            return return_d
-            for section in dictionary:
-                if re.search(self.less_good_section, section[1]):
-                    for index, text in dictionary[section].items():
-                        m = re.match(self.regex, text, re.DOTALL)
-                        if m:
-                            return_d[gb.VALUE] = m.group(1)
-                            return_d[gb.CONFIDENCE] = ('%.2f' % self.less_good_confidence)                       
-                            return_d[gb.STARTSTOPS].append({gb.START: m.start(1), gb.STOP:m.end(1)})                    
-                            return return_d
-            return return_d                   
+                            return_d[gb.CONFIDENCE] = ('%.2f' % section_confidence)                       
+                            return_d[gb.STARTSTOPS].append({gb.START: m.start(1), gb.STOP:m.end(1)})    
+
+            return return_d
         
-        
-        
-        
+       
         try:
             self.return_d = {gb.NAME: self.field_name, gb.VALUE: None, gb.CONFIDENCE: ('%.2f' % 0.0), \
                                  gb.KEY: gb.ALL, gb.VERSION: self.get_version(),\
                                  gb.STARTSTOPS: [], gb.TABLE: self.table}
             if hasattr(self ,'good_section'):               
-                self.return_d = get_from_section(dictionary)
+                self.return_d = get_from_section(dictionary, self.good_section, self.confidence)
+            if not self.return_d[gb.VALUE] and hasattr(self ,'less_good_section'):               
+                self.return_d = get_from_section(dictionary, self.less_good_section, self.less_good_confidence)
 
             if not self.return_d.get(gb.VALUE):   
                 '''

@@ -18,9 +18,10 @@ class Nottingham(OneFieldPerReport):
     __version__ = 'Nottingham1.0'
     def __init__(self):
         super(Nottingham, self).__init__()
-        self.field_name = 'Nottingham'
+        self.field_name = 'NottinghamGrade'
         self.regex = r'Nottingham [gG]rade:[\s]+Grade ([I]+)'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE
         self.value_type = 'match'
+        self.good_section = r'SUMMARY CANCER|DIAGNOSIS'

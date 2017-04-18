@@ -19,8 +19,9 @@ class Her2FISH(OneFieldPerReport):
     def __init__(self):
         super(Her2FISH, self).__init__()
         self.field_name = 'Her2FISH'
-        self.regex = r'Her-2/neu by FISH:[\s]([A-Za-z\/]+)'
+        self.regex = r'neu by FISH:[\s]+([PNE][ositivegativequivocal]+)'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE
         self.value_type = 'match'
+        self.good_section = r'SUMMARY CANCER|DIAGNOSIS'

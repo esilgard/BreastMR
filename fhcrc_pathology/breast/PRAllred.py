@@ -24,3 +24,4 @@ class PRAllred(OneFieldPerReport):
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE
         self.value_type = 'match'
+        self.good_section = r'SUMMARY CANCER|DIAGNOSIS'

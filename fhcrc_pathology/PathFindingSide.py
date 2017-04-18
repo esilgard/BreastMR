@@ -16,8 +16,8 @@ class PathFindingSide(OneFieldPerSpecimen):
         super(PathFindingSide, self).__init__()
         self.overall_field_name = 'PathFindingSide'
         self.overall_table = gb.PATHOLOGY_TABLE
-        self.specimen_confidence = 0.97
-        self.unlabled_specimen_confidence = 0.9
+        self.specimen_confidence = 0.77
+        self.unlabled_specimen_confidence = 0.7
         ## reference lists & dictionaries ##
         self.file_name_string = 'sides'
         ## relevant sections of the report ##
@@ -25,6 +25,7 @@ class PathFindingSide(OneFieldPerSpecimen):
         self.bad_section = r'CLINICAL|Note|SPECIMEN|Specimen|DESCRIPTION|DESC|GROSS'
         ## ability to infer new value from one or more existing ones
         self.inference_flag = True
+        self.pre_negation = r'(  near|above|below| from).{,75}'
 
     def infer(self, finding_set):
         ''' infer 'bilateral' if the finding set is specifically only 'right' and 'left' '''

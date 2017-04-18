@@ -27,3 +27,4 @@ class PathSite(OneFieldPerSpecimen):
         self.bad_section = r'CLINICAL|Note'
         self.pre_negation = r'( not | no |previous|negative |free of | near|above|below| from |without|against |(hx|history) of | \
                         to rule out|preclud| insufficient|suboptimal).{,75}'
+        self.post_negation = r'.{,50}( unlikely| not (likely|identif)| negative|p m|a m)'

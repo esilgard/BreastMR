@@ -50,6 +50,7 @@ def get(table_list):
                         chars = fields[gb.STARTSTOPS]
                         conf = fields[gb.CONFIDENCE]
                         max_overall = overall_findings[fields[gb.NAME]][1]
+        # make overall findings align with the worst set of findings
         if max_index:
             field_list.append(
                 {gb.NAME: 'OverallFinding', gb.KEY: gb.ALL, \
@@ -64,7 +65,7 @@ def get(table_list):
                  gb.VALUE: 'Benign', \
                  gb.STARTSTOPS: [], gb.CONFIDENCE: '.60'})
         if field_list:
-            ## don't return anything that doesn't have a value
+            ## don't return a table that doesn't have any field value
             table[gb.FIELDS] = field_list
             return_list.append(table)
     return return_list

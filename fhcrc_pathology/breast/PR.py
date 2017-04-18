@@ -19,8 +19,9 @@ class PR(OneFieldPerReport):
     def __init__(self):
         super(PR, self).__init__()
         self.field_name = 'PR'
-        self.regex = r'Progesterone receptor:[\s]+([A-Za-z\/]+)'
+        self.regex = r'Progesterone receptor:[\s]+([PNE][ositivegativequivocal]+)'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE
         self.value_type = 'match'
+        self.good_section = r'SUMMARY CANCER|DIAGNOSIS'

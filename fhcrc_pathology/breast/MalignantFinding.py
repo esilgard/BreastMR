@@ -10,7 +10,7 @@ import global_strings as gb
 
 class MalignantFinding(OneFieldPerSpecimen):
     ''' extract histologic findings'''
-    __version__ = 'OtherFinding1.0'
+    __version__ = 'MalignantFinding1.0'
     def __init__(self):
         super(MalignantFinding, self).__init__()       
         self.overall_field_name = 'MalignantFinding'
@@ -24,5 +24,5 @@ class MalignantFinding(OneFieldPerSpecimen):
         self.bad_section = r'CLINICAL|Note'
         ## there is a secondary data element that should be searched for
         ## based on either position or value of the first e.g. PathGrade
-        self.has_secondary_data_element = True
-        self.secondary_data_elements = ['PathGrade']
+        #self.has_secondary_data_element = True
+        #self.secondary_data_elements = ['PathGrade']

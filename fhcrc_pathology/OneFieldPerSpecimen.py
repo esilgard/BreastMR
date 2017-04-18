@@ -16,6 +16,7 @@ class OneFieldPerSpecimen(object):
     __version__ = 'OneFieldPerSpecimen1.0'
     pre_negation = r'( not | no |negative |previous|free of |without|against |(hx|history) of | \
                         to rule out|preclud| insufficient|suboptimal).{,75}'
+    
     post_negation = r'.{,50}( unlikely| not (likely|identif)| negative)'
     ## default False flag; true means the slgorithm will infer some other value based on given input
     inference_flag = False
@@ -69,7 +70,7 @@ class OneFieldPerSpecimen(object):
             ''' helper method for finding the string match instances '''
             text = text.lower()
             text = re.sub(r'[.,:;\\\/\-]', ' ', text)
-            for finding in string_list:
+            for finding in string_list:         
                 if re.search(r'([\W]|^)' + '(' + finding + ')' + r'([\W]|$)', text) and \
                    not re.search(self.pre_negation + '(' + finding + ')' + r'([\W]|$)', text) and \
                    not re.search(r'([\W]|^)' + finding + self.post_negation, text):

@@ -1,15 +1,17 @@
-Adenoma
+Adenoma;adenomas
 Ascites
-Cyst
+Cyst;cysts
 Dysplasia
-Fibroma
-Fibromadenoma
+Fibroma;fibromas
+Fibromadenoma;fibroadenomas
 Fibrosis
 Granuloma
 Hyperplasia
 Inflammation
-Lipoma
+Lipoma;lypomas
 Metaplasia
 Necrosis
-Polyp
+Polyp;polyps
 Treatment Effect
+Calcifications
+Microcalcifications
