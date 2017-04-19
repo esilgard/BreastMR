@@ -65,8 +65,8 @@ class OneFieldPerReport(object):
                         m = re.match(self.regex, text, re.DOTALL)
                         if m and not re.search(self.pre_negation + self.regex, text, re.DOTALL):                            
                             return_d[gb.VALUE] = m.group(1)
-                            return_d[gb.CONFIDENCE] = ('%.2f' % section_confidence)                       
-                            return_d[gb.STARTSTOPS].append({gb.START: m.start(1), gb.STOP:m.end(1)})    
+                            return_d[gb.CONFIDENCE] = ('%.2f' % section_confidence)     
+                            return_d[gb.STARTSTOPS].append({gb.START: m.start(1)+section[2], gb.STOP:m.end(1)+section[2]})    
 
             return return_d
         
