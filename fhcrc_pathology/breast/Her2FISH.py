@@ -19,7 +19,7 @@ class Her2FISH(OneFieldPerReport):
     def __init__(self):
         super(Her2FISH, self).__init__()
         self.field_name = 'Her2FISH'
-        self.regex = r'neu by FISH:[\s]+([PNE][ositivegativequivocal]+)'
+        self.regex = r'neu by FISH:[\s]+([PNE][ositivegativequivocal]{6,})'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE

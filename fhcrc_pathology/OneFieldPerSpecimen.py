@@ -17,7 +17,7 @@ class OneFieldPerSpecimen(object):
     pre_negation = r'( not | no |negative |previous|free of |without|against |(hx|history) of | \
                         to rule out|preclud| insufficient|suboptimal).{,75}'
     
-    post_negation = r'.{,50}( unlikely| not (likely|identif)| negative)'
+    post_negation = r'.{,50}( unlikely| not (likely|identif)| negative|absent)'
     ## default False flag; true means the slgorithm will infer some other value based on given input
     inference_flag = False
     ## default False secondary element; true means there's another data element that should

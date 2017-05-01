@@ -19,7 +19,7 @@ class ER(OneFieldPerReport):
     def __init__(self):
         super(ER, self).__init__()
         self.field_name = 'ER'
-        self.regex = r'Estrogen receptor:[\s]+([PNE][ositivegativequivocal]+)'
+        self.regex = r'Estrogen receptor:[\s]+([PNE][ositivegativequivocal]{6,})'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE

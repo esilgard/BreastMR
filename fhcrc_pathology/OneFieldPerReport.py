@@ -27,6 +27,7 @@ class OneFieldPerReport(object):
         self.table = 'Default'
         self.value_type = 'Default'
         self.pre_negation = 'r(previous|pre-treatment|pre treatment| past).{,100}'
+        self.post_negation = r'.{,50}( unlikely| not (likely|identif)| negative|absent)'
         
     def get_dictionaries(self, reference_file_name_string):
         '''
@@ -63,7 +64,8 @@ class OneFieldPerReport(object):
                 if re.search(section_lookup, section[1]):
                     for index, text in dictionary[section].items():                        
                         m = re.match(self.regex, text, re.DOTALL)
-                        if m and not re.search(self.pre_negation + self.regex, text, re.DOTALL):                            
+                        if m and not re.search(self.pre_negation + self.regex, text, re.DOTALL) and \
+                            not re.search(self.regex + self.post_negation, text, re.DOTALL):                            
                             return_d[gb.VALUE] = m.group(1)
                             return_d[gb.CONFIDENCE] = ('%.2f' % section_confidence)     
                             return_d[gb.STARTSTOPS].append({gb.START: m.start(1)+section[2], gb.STOP:m.end(1)+section[2]})    
