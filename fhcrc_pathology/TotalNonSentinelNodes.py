@@ -20,7 +20,7 @@ class TotalNonSentinelNodes(OneFieldPerReport):
     def __init__(self):
         super(TotalNonSentinelNodes, self).__init__()
         self.field_name = 'TotalNonSentinelNodes'
-        self.regex = r'[\/] Total non-sentinel nodes[ :]+([\d]+)'
+        self.regex = r'[\/] Total [nN]on-[SNLsetil nod]+[ :]+([\d]+)'
         self.confidence = .65
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE

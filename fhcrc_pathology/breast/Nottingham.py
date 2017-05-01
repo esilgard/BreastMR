@@ -19,7 +19,7 @@ class Nottingham(OneFieldPerReport):
     def __init__(self):
         super(Nottingham, self).__init__()
         self.field_name = 'NottinghamGrade'
-        self.regex = r'Nottingham [gG]rade:[\s]+Grade ([I]+)'
+        self.regex = r'Nottingham [gG]rade[:]?[\sGgrade ]+([I]+)'
         self.confidence = .75
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE

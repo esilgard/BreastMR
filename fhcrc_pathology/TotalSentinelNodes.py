@@ -20,7 +20,7 @@ class TotalSentinelNodes(OneFieldPerReport):
     def __init__(self):
         super(TotalSentinelNodes, self).__init__()
         self.field_name = 'TotalSentinelNodes'
-        self.regex = r'[\/] Total sentinel nodes[ :]+([\d]+)'
+        self.regex = r'[\/] [tT]otal [SNLsetil nod]+[ :]+([\d]+)'
         self.confidence = .65
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE

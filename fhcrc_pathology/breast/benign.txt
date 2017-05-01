@@ -6,12 +6,13 @@ Fibroma;fibromas
 Fibromadenoma;fibroadenomas
 Fibrosis
 Granuloma
-Hyperplasia
+UDH;usual ductal hyperplasia
 Inflammation
 Lipoma;lypomas
 Metaplasia
 Necrosis
 Polyp;polyps
-Treatment Effect
+Treatment Effect;treatment related changes
 Calcifications
 Microcalcifications
+Sclerosis;stromal sclerosis
