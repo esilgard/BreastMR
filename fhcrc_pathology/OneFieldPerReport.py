@@ -18,6 +18,9 @@ class OneFieldPerReport(object):
     '''
     __version__ = 'OneFieldPerReport1.0'
     file_name_string = ''
+    pre_negation = 'r([pP]revious|re[- ]treatment| [pP]ast).{,100}'
+    post_negation = r'.{,50}( unlikely| not (likely|identif)| [nN]egative|[Aa]bsent)'
+    
     def __init__(self):
         self.field_name = 'Default'
         self.regex = ''
@@ -26,8 +29,7 @@ class OneFieldPerReport(object):
         self.match_style = 'Default'
         self.table = 'Default'
         self.value_type = 'Default'
-        self.pre_negation = 'r([pP]revious|[pP]re-treatment|[pP]re treatment| [pP]ast).{,100}'
-        self.post_negation = r'.{,50}( unlikely| not (likely|identif)| [nN]egative|[Aa]bsent)'
+        
         
     def get_dictionaries(self, reference_file_name_string):
         '''
