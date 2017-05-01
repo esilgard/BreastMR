@@ -20,7 +20,7 @@ class PositiveNonSentinelNodes(OneFieldPerReport):
     def __init__(self):
         super(PositiveNonSentinelNodes, self).__init__()
         self.field_name = 'PositiveNonSentinelNodes'
-        self.regex = r'[Nn]on-(?:SNLs|Sentinel nodes) with carcinoma[ :]+([\d]+)'
+        self.regex = r'[Nn]on-(?:SNLs|sentinel nodes) with carcinoma[ :]+([\d]+)'
         self.confidence = .65
         self.match_style = 'first'
         self.table = gb.PATHOLOGY_TABLE
