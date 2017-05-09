@@ -16,3 +16,4 @@ Treatment Effect;treatment related changes
 Calcifications
 Microcalcifications
 Sclerosis;stromal sclerosis
+Complete Response;complete pathologic response

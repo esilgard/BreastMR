@@ -3,7 +3,7 @@ ADH;atypical ductal hyperplasia
 ALH;atypical lobular hyperplasia
 Atypical Cells;atypical cell(s)?;atypia
 In-Situ, NOS
-Radial Scar
-Sclerotic Papilloma or Lesion;sclerosing papilloma;sclerosing lesion;sclerotic lesion
+Radial Scar;complex schlerosing lesion
+Sclerotic Papilloma or Lesion;sclerosing papilloma
 Phyllodes;pyllodes tumor
 Papillary Lesion
